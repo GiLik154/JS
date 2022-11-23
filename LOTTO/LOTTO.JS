@@ -27,8 +27,8 @@ for (let i = 0; i < 7; i++) { //숫자 6개 뽑기
                     break;
                 }
             }
-            break;
         }
+        break;
     }
 }
 document.write("번호 입력 :" + userNumber + '\n');
@@ -43,8 +43,8 @@ for (let i = 0; i < 7; i++) { // 컴퓨터 숫자 랜덤 뽑기
         if (q != i && lottoNumber[q] == lottoNumber[i] || lottoNumber[i] > 45) { //45이상 나온 숫자, 동일 숫자 걸러냄
             // document.write(i, q);
             i--; // 다시 검사
-            break;
         }
+        break;
     }
 }
 
