@@ -1,32 +1,20 @@
 let lottoNumber = new Array();
 let userNumber = new Array();
-let lottoSame = new Array();
-let a = 0;
-let b = 0;
-let c = 0;
-let v = 0;
+let lottoSame = 0;
+let userWrite = 0;
+let comArrNumber = 0;
+let comRandom = 0;
 let sameNumber = 0;
-let specNum;
-let specNumRan;
-let specNumRanI;
+let specNumber;
+let specNumRanom;
+let specArrNumer;
 let bounus = false;
-let loop =true;
-
-// while(loop){
-    bounus = false;
-    v = v + 1; // 몇번 돌렸는지 확인
-    document.write("로또 시작");
-document.write("<hr>");
-document.write("<hr>");
-
 
 for (let i = 0; i < 7; i++) { //숫자 6개 뽑기
-    // a = prompt((i+1) + "번입력"); //창 띄워서 뽑기
-    b = Math.random() * 45 + 1; // 자동돌리기
-    a = Math.floor(b); // 자동돌리기
-    userNumber[i] = a;
+    userWrite = prompt((i+1) + "번입력"); //창 띄워서 뽑기
+    userNumber[i] = userWrite;
     while (true) {
-        if (a > 45 || a < 0) {
+        if (userWrite > 45 || userWrite < 0) {
             i--;
             alert("다시 입력하세요");
             break;
@@ -43,15 +31,14 @@ for (let i = 0; i < 7; i++) { //숫자 6개 뽑기
         }
     }
 }
-// userNumberText.innerHtml = "번호입력:" + userNumber + '\n'
 document.write("번호 입력 :" + userNumber + '\n');
 document.write("<hr>");
 
 
 for (let i = 0; i < 7; i++) { // 컴퓨터 숫자 랜덤 뽑기
-    c = Math.random() * 45 + 1;
-    b = Math.floor(c);
-    lottoNumber[i] = b;
+    comRandom = Math.random() * 45 + 1;
+    comArrNumber = Math.floor(comRandom);
+    lottoNumber[i] = comArrNumber;
     for (let q = 0; q < 7; q++) { // 동일 숫자 확인
         if (q != i && lottoNumber[q] == lottoNumber[i] || lottoNumber[i] > 45) { //45이상 나온 숫자, 동일 숫자 걸러냄
             // document.write(i, q);
@@ -62,10 +49,10 @@ for (let i = 0; i < 7; i++) { // 컴퓨터 숫자 랜덤 뽑기
 }
 
 
-{specNumRan = Math.random() * 7; // 보너스 숫자 뽑기
-specNumRanI = Math.floor(specNumRan);
-specNum = lottoNumber[specNumRanI]; 
-document.write(("보너스 번호" + specNum))
+{specNumRanom = Math.random() * 7; // 보너스 숫자 뽑기
+specArrNumer = Math.floor(specNumRanom);
+specNumber = lottoNumber[specArrNumer]; 
+document.write(("보너스 번호" + specNumber))
 document.write("<hr>");
 }
 
@@ -78,7 +65,7 @@ for(let i = 0; i < 7; i++){ //번호 비교
             lottoSame = i;
             document.write((lottoSame + 1) + "번 같음" + '\n');
             document.write("<hr>");
-            if(specNum == userNumber[i]){
+            if(specNumber == userNumber[i]){
                 document.write((lottoSame + 1) + "번 보너스 번호 같음");
                 document.write("<hr>");
                 bounus = true;
@@ -111,8 +98,3 @@ if (sameNumber >= 3 && sameNumber < 4 && bounus == false) {
     else if (sameNumber >= 6 && bounus == false) {
                     document.write("1등입니다");
     }
-
-sameNumber = 0 ;
-document.write(v + "번 돌렷습니다.");
-document.write("<hr>");
-// }
