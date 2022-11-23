@@ -19,7 +19,7 @@ for (let i = 0; i < 7; i++) { //숫자 6개 뽑기
             alert("다시 입력하세요");
             break;
         }
-        else if(true){
+        else {
             for (let q = 0; q < 7; q++) { // 동일 숫자 확인
                 if (q != i && userNumber[q] == userNumber[i]) { //45이상 나온 숫자, 동일 숫자 걸러냄
                     // alert("중복된 숫자입니다");
