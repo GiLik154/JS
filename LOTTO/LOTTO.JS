@@ -1,19 +1,7 @@
-let lottoNumber = new Array();
-let userNumber = new Array();
-let lottoSame = 0;
-let userWrite = 0;
-let comArrNumber = 0;
-let comRandom = 0;
-let sameNumber = 0;
-let specNumber;
-let specNumRanom;
-let specArrNumer;
-let bounus = false;
-
 for (let i = 0; i < 6; i++) { //숫자 6개 뽑기
-    // userWrite = prompt((i+1) + "번입력"); //창 띄워서 뽑기
-    a = Math.random() * 45 + 1;
-    userWrite = Math.floor(a);
+    userWrite = prompt((i+1) + "번입력"); //창 띄워서 뽑기
+    // a = Math.random() * 45 + 1;
+    // userWrite = Math.floor(a);
     userNumber[i] = userWrite;
     while (true) {
         if (userWrite > 45 || userWrite < 0) {
