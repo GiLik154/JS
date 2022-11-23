@@ -55,10 +55,8 @@ for (let i = 0; i < 7; i++) { // 컴퓨터 숫자 랜덤 뽑기
     for (let q = 0; q < 7; q++) { // 동일 숫자 확인
         if (q != i && lottoNumber[q] == lottoNumber[i] || lottoNumber[i] > 45) { //45이상 나온 숫자, 동일 숫자 걸러냄
             // document.write(i, q);
-            c = Math.random() * 45 + 1; // 숫자 재설정
-            b = Math.floor(c);
-            lottoNumber[i] = b;
-            q = -1; // 다시 검사
+            i--; // 다시 검사
+            break;
         }
     }
 }
@@ -67,21 +65,11 @@ for (let i = 0; i < 7; i++) { // 컴퓨터 숫자 랜덤 뽑기
 {specNumRan = Math.random() * 7; // 보너스 숫자 뽑기
 specNumRanI = Math.floor(specNumRan);
 specNum = lottoNumber[specNumRanI]; 
-document.write(("보너스 번호" + lottoNumber[specNumRanI]))
+document.write(("보너스 번호" + specNum))
 document.write("<hr>");
 }
 
-// for (let i = 0; i < 5; i++) { // 동일한 숫자 있는지 버그 확인
-//     for (let q = 1; q < 6; q++) {
-//         if (i != q && lottoNumber[i] == lottoNumber[q]) {
-//             document.write(i + q);
-//             document.write("bugkkkk");
-//             document.write('\n' + lottoNumber);
-//             alert(lottoNumber)
-//             G = false;
-//         }
-//     }
-// }
+
 
 for(let i = 0; i < 7; i++){ //번호 비교
     for(let q = 0; q < 7; q++){
@@ -90,7 +78,7 @@ for(let i = 0; i < 7; i++){ //번호 비교
             lottoSame = i;
             document.write((lottoSame + 1) + "번 같음" + '\n');
             document.write("<hr>");
-            if(lottoNumber[specNumRanI] == userNumber[i]){
+            if(specNum == userNumber[i]){
                 document.write((lottoSame + 1) + "번 보너스 번호 같음");
                 document.write("<hr>");
                 bounus = true;
