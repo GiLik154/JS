@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="reg_member.css">
+        <script src="reg_member.js"> </script>
+        <title>DOM</title>
+    </head>
+    <body>
+        <form action="#" method="GET" id="form">
+            <div id = "box">
+                <div id = "text_box">
+                    <input id="id" type="text" minlength="6" maxlength="12" required placeholder="아이디 = (6자리이상,12자리이하)">
+                    <br>
+                    <input id="pw" type="text" minlength="6" maxlength="12" required placeholder="비밀번호 = (6자리이상,12자리이하)">
+                    <br>
+                    <input id="pw2" type="text" minlength="6" maxlength="12" required placeholder="비밀번호재입력">
+                    <br>
+                    <input id="name" type="text" minlength="2" maxlength="12" required placeholder="이름 = (2자리이상,12자리이하)">
+                    <br>
+                    <input id="email" type="text" minlength="4" maxlength="12" required placeholder="이메일 = (4자리이상,12자리이하)">
+                    <br>
+               </div>
+                <input id="year" type="text" minlength="4" maxlength="12" required placeholder="1999">
+                <select name ="month" class="select">
+                    <option disabled selected>월</option>
+                    <option value="1">1월</option>
+                    <option value="2">2월</option>
+                    <option value="3">3월</option>
+                    <option value="4">4월</option>
+                    <option value="5">5월</option>
+                    <option value="6">6월</option>
+                    <option value="7">7월</option>
+                    <option value="8">8월</option>
+                    <option value="9">9월</option>
+                    <option value="10">10월</option>
+                    <option value="11">11월</option>
+                    <option value="12">12월</option>
+                    </select>
+                <select name ="day" class="select">
+                    <option disabled selected>일</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    </select>
+                <br>
+                핸드폰번호:<input id="phone">
+                <br>
+                <input type="radio" name="sex" value="M">남성
+                <input type="radio" name="sex" value="G" checked>여성
+                <br>
+                <!-- <a href="join.html"> -->
+                    <input id="submit" type="submit" onclick="regComplet();" value="회원가입">
+                    <!-- <a/> -->
+            </div>
+        </form>
+
+    </body>
+</html>
