@@ -54,18 +54,18 @@ function checkName(){
         return true;
     }
     else {
-        alert("비밀번호 확인 길이를 확인해주세요.");
+        alert("이름 길이를 확인해주세요.");
         return false;
     }
 }
 
 function checkEmail(){
     if(email.length>=2 && email.length<=12){
-        console.log("ok 비밀번호2");
+        console.log("ok 이메일");
         return true;
     }
     else {
-        alert("비밀번호 확인 길이를 확인해주세요.");
+        alert("이메일 길이를 확인해주세요.");
         return false;
     }
 }
@@ -94,8 +94,8 @@ function check() {
 function regComplet(){
 
     if(check()){
-        alert("회원가입 완료");
         location.href ='index.html';
+        alert("회원가입 완료");
     } else{
         alert("회원가입 실패");
     }
