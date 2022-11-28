@@ -94,8 +94,8 @@ function check() {
 function regComplet(){
 
     if(check()){
-        location.href ='index.html';
         alert("회원가입 완료");
+        location.href ='index.html';
     } else{
         alert("회원가입 실패");
     }
