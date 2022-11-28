@@ -94,7 +94,7 @@ function check() {
 function regComplet(){
 
     if(check()){
-        location.href ='join.html';
+        location.href ='index.html';
         alert("회원가입 완료");
     } else{
         alert("회원가입 실패");
